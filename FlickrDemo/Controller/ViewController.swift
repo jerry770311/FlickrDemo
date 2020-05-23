@@ -14,7 +14,7 @@ protocol FatchValueDelegate {
     func fetchNumber(_ text: String)
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     //搜尋的輸入框
     @IBOutlet weak var inputTextField: UITextField!
@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        inputTextField.delegate = self
+        numberTextField.delegate = self
         setup()
     }
     
@@ -90,6 +92,13 @@ class ViewController: UIViewController {
         
         return scan.scanInt(&val) && scan.isAtEnd
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
     }
     
 }

@@ -19,20 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dm5-pE-Nva">
-                                <rect key="frame" x="50" y="434" width="314" height="30"/>
+                                <rect key="frame" x="50" y="433" width="314" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZV-ey-QGO">
-                                <rect key="frame" x="50" y="494" width="314" height="30"/>
+                                <rect key="frame" x="50" y="493" width="314" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="searchHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFG-S2-WUT"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-fS-isx">
-                                <rect key="frame" x="50" y="374" width="314" height="30"/>
+                                <rect key="frame" x="50" y="373" width="314" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -43,12 +43,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dLX-fS-isx" secondAttribute="trailing" constant="50" id="2l1-XD-KR2"/>
                             <constraint firstItem="dLX-fS-isx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ggv-E0-rcu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dm5-pE-Nva" secondAttribute="trailing" constant="50" id="Icb-Gc-rlW"/>
+                            <constraint firstItem="dm5-pE-Nva" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jpe-wK-JSn"/>
                             <constraint firstItem="dm5-pE-Nva" firstAttribute="top" secondItem="dLX-fS-isx" secondAttribute="bottom" constant="30" id="Mmm-fo-1QG"/>
                             <constraint firstItem="dm5-pE-Nva" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ubw-vI-A1O"/>
+                            <constraint firstItem="dm5-pE-Nva" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vxs-hx-0KE"/>
+                            <constraint firstItem="PZV-ey-QGO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="afB-hX-v9A"/>
                             <constraint firstItem="PZV-ey-QGO" firstAttribute="top" secondItem="dm5-pE-Nva" secondAttribute="bottom" constant="30" id="paH-0C-6SX"/>
+                            <constraint firstItem="dLX-fS-isx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u4C-y6-Lqk"/>
                             <constraint firstItem="PZV-ey-QGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="vDU-QV-9zL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PZV-ey-QGO" secondAttribute="trailing" constant="50" id="vaa-bU-rSQ"/>
-                            <constraint firstItem="dLX-fS-isx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="286" id="vgz-wu-nbu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
