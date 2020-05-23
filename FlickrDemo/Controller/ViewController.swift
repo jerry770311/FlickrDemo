@@ -55,12 +55,14 @@ class ViewController: UIViewController {
 
     @IBAction func searchHandler(_ sender: UIButton) {
 
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as? FlickrSearchCollectionViewController {
-            self.delegate = controller
-            self.delegate?.fetchInputText(inputTextField.text!)
-            self.delegate?.fetchNumber(numberTextField.text!)
-            navigationController?.pushViewController(controller, animated: true)
-            
+        if isPurnInt(string: numberTextField.text!) {
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as? FlickrSearchCollectionViewController {
+                self.delegate = controller
+                self.delegate?.fetchInputText(inputTextField.text!)
+                self.delegate?.fetchNumber(numberTextField.text!)
+                navigationController?.pushViewController(controller, animated: true)
+                
+            }
         }
 
     }
@@ -77,6 +79,17 @@ class ViewController: UIViewController {
             searchButton.backgroundColor = UIColor.gray
             searchButton.isEnabled = false
         }
+    }
+    
+    ///判斷是否為數字
+    func isPurnInt(string: String) -> Bool {
+        
+        let scan: Scanner = Scanner(string: string)
+        
+        var val:Int = 0
+        
+        return scan.scanInt(&val) && scan.isAtEnd
+        
     }
     
 }

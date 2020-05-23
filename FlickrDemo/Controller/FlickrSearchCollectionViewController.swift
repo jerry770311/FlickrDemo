@@ -42,10 +42,9 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
         } else {
             encodedString = inputText!
         }
-        
-        //b1f2069dbe375757c1c5da8a7a76de47
+                
         if let url = URL(string: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\( encodedString!)&per_page=\(numberText!)&format=json&nojsoncallback=1") {
-            print(url)
+    
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let data = data, let searchData = try? JSONDecoder().decode(SearchData.self, from: data) {
                     self.photos = searchData.photos.photo
@@ -68,13 +67,13 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
         for (_, value) in string.enumerated() {
             
             if ("\u{4E00}" <= value  && value <= "\u{9FA5}") {
+                
                 return true
             }
         }
         
         return false
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
